@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <ul id="imges">
+        <li><img src="ke.png" width="100px" alt="image" ></li>
+        <li><img src="Arcane.jpeg" width="100px" alt="image" id="company"></li>
+        
+    </ul>
+    <script>
+        //event bubling bottom se top
+        //event capturing top se bottom
+        document.getElementById('imges').addEventListener('click',function(e){
+            console.log('inside the ul')
+        },true)
+        document.getElementById('company').addEventListrner('click',function(e){
+            console.log('inside the image')
+        },true)
+
+
+    </script>
+</body>
+</html>
